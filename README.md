@@ -1,14 +1,24 @@
-# grafanapy
+# 📊 GrafanaPy
 
-**grafanapy** lets you serve pandas DataFrames as Grafana-compatible JSON APIs for dashboards.
+**GrafanaPy** is a Python package that allows you to seamlessly expose a `pandas.DataFrame` via a FastAPI server and visualize it in **Grafana** using the **JSON API** and **ECharts** plugins.
 
-## Features
+> Perfect for Python developers and data professionals who want to connect their Python data directly to Grafana dashboards.
 
-- Serve DataFrame as `/data` endpoint
-- Serve ECharts config as `/echarts`
-- Easy integration with JSON API plugin in Grafana
+---
 
-## Install
+## ✨ Features
+
+- 📦 Serve Pandas DataFrames as JSON endpoints
+- ⚡ Auto-generate ECharts configs for quick visualizations
+- 🔌 Compatible with Grafana’s JSON API & ECharts plugins
+- 🧪 Easy to test locally, no DB or external API required
+
+---
+
+## 📦 Installation
+
+### 1. Clone or Download the Repo
 
 ```bash
-pip install fastapi uvicorn pandas
+git clone https://github.com/yourusername/grafanapy.git
+cd grafanapy
