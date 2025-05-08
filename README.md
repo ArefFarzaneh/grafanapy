@@ -22,3 +22,45 @@
 ```bash
 git clone https://github.com/yourusername/grafanapy.git
 cd grafanapy
+```
+
+
+### 2.Install Python Dependencies
+
+```bash
+pip install fastapi uvicorn pandas
+```
+
+---
+### 3. ▶️ Running the Server
+Create a test script like test_grafana_server.py
+
+```bash
+import pandas as pd
+from grafanapy.server import start_server
+
+df = pd.DataFrame({
+    "time": pd.date_range(end=pd.Timestamp.now(), periods=10, freq="H"),
+    "value": [i**0.5 for i in range(10)]
+})
+
+start_server(df)
+```
+Then run it:
+```bash
+python test_grafana_server.py
+```
+
+You should see:
+```bash 
+Serving Grafana-compatible data at http://localhost:8000/data and /echarts
+```
+---
+
+### 4. 📥 Install and Set Up Grafana
+[official instructions:](https://grafana.com/docs/grafana/latest/setup-grafana/installation/)
+
+Grafana will run at:
+[http://localhost:3000](http://localhost:3000)
+
+(Default login: `admin` / `admin`)
