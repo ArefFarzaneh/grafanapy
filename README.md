@@ -83,9 +83,13 @@ Click Add data source
 Select JSON API
 
 Configuration:
+
 Name	`FastAPI Data`
 
 URL	`http://localhost:8000`
 
 Access	`Server (default)`
 
+Click Save & Test
+
+You should see: ✅ Data source is working
