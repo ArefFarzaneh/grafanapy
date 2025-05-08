@@ -84,6 +84,8 @@ Select JSON API
 
 Configuration:
 Name	`FastAPI Data`
+
 URL	`http://localhost:8000`
+
 Access	`Server (default)`
 
