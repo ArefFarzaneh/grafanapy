@@ -58,9 +58,32 @@ Serving Grafana-compatible data at http://localhost:8000/data and /echarts
 ---
 
 ### 4. 📥 Install and Set Up Grafana
-[official instructions:](https://grafana.com/docs/grafana/latest/setup-grafana/installation/)
+[official instructions](https://grafana.com/docs/grafana/latest/setup-grafana/installation/)
 
 Grafana will run at:
 [http://localhost:3000](http://localhost:3000)
 
 (Default login: `admin` / `admin`)
+---
+### 4. 🔌 Install Required Grafana Plugins
+
+✅ JSON API Plugin
+📊 ECharts Panel Plugin (Optional)
+
+Restart Grafana if needed:
+`sudo systemctl restart grafana-server`
+
+---
+### 5.⚙️ Add JSON API as Data Source
+
+Go to Configuration → Data Sources
+
+Click Add data source
+
+Select JSON API
+
+Configuration:
+Name	`FastAPI Data`
+URL	`http://localhost:8000`
+Access	`Server (default)`
+
